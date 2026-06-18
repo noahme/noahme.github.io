@@ -4,29 +4,174 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noah Egan</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      max-width: 700px;
-      margin: 80px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #1a1a1a;
-    }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.2em;
-    }
-    p {
-      color: #444;
-    }
-    a {
-      color: #0645ad;
-    }
-  </style>
+  <meta name="description" content="Noah Egan — PhD student studying cultural evolution at Stanford.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>temp.</h1>
-  <p>temp.</p>
+  <div class="page">
+
+    <header class="masthead">
+      <h1 class="name">Noah Egan</h1>
+      <p class="tagline">Cultural evolution &middot; computational social science</p>
+    </header>
+
+    <!-- ============ MAIN COLUMN ============ -->
+    <main class="main">
+
+      <!-- ---- Research interests ---- -->
+      <section class="intro">
+        <p>
+          I'm a PhD student in Biology at Stanford, advised by Marc Feldman, where I
+          study cultural evolution. Cultural variants &mdash; songs, words, political
+          ideas, even opening moves in chess &mdash; spread through populations, get
+          copied with variation, and are taken up unevenly. That makes culture an
+          evolutionary system, and I'm interested in how recent structural changes,
+          the internet and now generative AI, are reshaping how it evolves.
+        </p>
+        <p>
+          Most of my work uses large cultural datasets to measure macro-scale dynamics
+          like diversity and the rate of change, the way genetic data reshaped our
+          picture of biological evolution. I care especially about building measurement
+          methods that travel across very different domains, from books and video games
+          to professional chess. Before Stanford I studied computer science at Georgia
+          Tech and worked on collective behavior in social insects.
+        </p>
+      </section>
+
+      <!-- ---- Projects ---- -->
+      <section class="block">
+        <h2 class="block-title">Projects</h2>
+
+        <article class="project">
+          <h3 class="project-title">Cultural differentiation and city size</h3>
+          <p>
+            Do people in larger cities become more culturally different from one
+            another, or does a city just look more diverse because it holds more
+            people? Using the BookCrossing, MovieLens, and Steam datasets, I measure
+            how between-individual differences in books, movies, and video games scale
+            with city size (up to ~370K users). Larger cities show convergence on
+            popular variants alongside divergence on niche ones &mdash; a stronger
+            monoculture and more individual exploration at the same time.
+          </p>
+          <!-- TODO: replace # with link to draft / paper / repo -->
+          <p class="project-links"><a href="#">draft (pdf)</a></p>
+        </article>
+
+        <article class="project">
+          <h3 class="project-title">The speed of cultural change in chess and Go</h3>
+          <p>
+            How quickly do top players change their opening moves, and what happened
+            when online servers and superhuman engines arrived? Across 50 years of
+            tournament records (3.45M chess and 116K Go games), I decompose
+            year-over-year change into a shared, population-wide component and an
+            individual one. Chess change is driven mostly by individual exploration,
+            while Go's post-AlphaGo spike reflects shared, population-wide adoption.
+          </p>
+          <!-- TODO: replace # with link -->
+          <p class="project-links"><a href="#">draft (pdf)</a></p>
+        </article>
+
+        <article class="project">
+          <h3 class="project-title">Self-assembly in fire ant pontoon bridges</h3>
+          <p>
+            With the Goldman and Randall labs at Georgia Tech, I studied how fire ants
+            build bridges out of their own bodies using only local information. I built
+            an agent-based model and a computer-vision pipeline to quantify the
+            behavior, and helped prove that a Markov-chain model of bridge formation
+            matches experiments.
+          </p>
+          <!-- TODO: replace # with link -->
+          <p class="project-links"><a href="#">DISC paper</a></p>
+        </article>
+
+        <article class="project">
+          <h3 class="project-title">Coexistence under higher-order interactions</h3>
+          <p>
+            At Princeton I built a spatial Lotka-Volterra model and its mean-field PDE
+            approximation, and found spatial patterns that promote species coexistence
+            only when higher-order interactions between species are present.
+          </p>
+          <!-- TODO: replace # with link, or delete this whole <article> if you don't want it -->
+          <p class="project-links"><a href="#">writeup</a></p>
+        </article>
+      </section>
+
+      <!-- ---- Publications ---- -->
+      <section class="block">
+        <h2 class="block-title">Publications</h2>
+        <ol class="pubs">
+          <li>
+            Denton, K., Heinrich-Mora, E., <strong>Egan, N.</strong>, Feldman, M. (2025).
+            Culture is not ecology. <em>Evolution and Human Behavior</em>.
+          </li>
+          <li>
+            Oh, S., Briones, J., Calvert, J., <strong>Egan, N.</strong>, Randall, D.,
+            &amp; Richa, A. W. (2024). Single bridge formation in self-organizing
+            particle systems. <em>International Symposium on Distributed Computing
+            (DISC)</em>.
+          </li>
+          <li>
+            <strong>Egan, N.</strong>, Peixoto, N., &amp; Matto, H. (2020). Creating a
+            personalized cognitive-bias modification therapy exercise in virtual reality
+            using simulated reaction time data. <em>Journal of Student Scientists'
+            Research</em>, 2.
+          </li>
+        </ol>
+
+        <h3 class="subhead">In preparation</h3>
+        <ol class="pubs">
+          <li>
+            <strong>Egan, N.*</strong>, Zeng, H.*, Platnick, J., Avinery, R., Bagheri, H.,
+            Li, S., Sasaki, T., Randall, D., Goldman, D. (2026). Multimodal mechanisms
+            of self-assembly in ant pontoon bridging.
+          </li>
+        </ol>
+
+        <h3 class="subhead">Selected talks &amp; posters</h3>
+        <ol class="pubs">
+          <li>
+            <strong>Egan, N.</strong>, Zeng, H., Avinery, R., Li, S., Bagheri, H.,
+            Sasaki, T., &amp; Goldman, D. (2023). Global coordination using local
+            information in fire ant pontoon bridges. <em>Bulletin of the American
+            Physical Society (APS)</em>.
+          </li>
+          <li>
+            <strong>Egan, N.</strong>, Zeng, H., Avinery, R., Bagheri, H., Li, S.,
+            Sasaki, T., Goldman, D. (2023). Global coordination using local information
+            in fire ant pontoon bridge simulations. <em>Society for Integrative and
+            Comparative Biology (SICB)</em>.
+          </li>
+        </ol>
+      </section>
+
+    </main>
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar">
+      <!-- TODO: drop your photo at assets/profile.jpg (square works best) -->
+      <img class="photo" src="assets/profile.jpg" alt="Noah Egan">
+
+      <div class="meta">
+        <p class="meta-role">PhD Student</p>
+        <p class="meta-line">Biology</p>
+        <p class="meta-line">Stanford University</p>
+      </div>
+
+      <div class="meta">
+        <p class="meta-line"><a href="mailto:noahe@stanford.edu">noahe@stanford.edu</a></p>
+      </div>
+
+      <nav class="links">
+        <!-- TODO: drop your CV at assets/cv.pdf, and fill in the two links below -->
+        <a href="assets/cv.pdf">CV</a>
+        <a href="#">Google Scholar</a>
+        <a href="#">LinkedIn</a>
+      </nav>
+    </aside>
+
+  </div>
 </body>
 </html>
