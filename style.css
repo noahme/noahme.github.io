@@ -1,0 +1,207 @@
+/* ============================================================
+   Noah Egan — personal site
+   Plain CSS. Edit colors in the :root block below.
+   ============================================================ */
+
+:root {
+  --bg:        #fcfcf9;   /* warm off-white page background       */
+  --ink:       #1b1b19;   /* main text                            */
+  --muted:     #6f6d66;   /* captions, affiliation, sidebar meta  */
+  --rule:      #e4e2da;   /* hairline dividers                    */
+  --accent:    #2f6f5e;   /* links — a muted forest green         */
+  --accent-hi: #1f5848;   /* link hover                           */
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --mono:  "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --measure: 40rem;       /* comfortable text line length         */
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  transition: color .15s ease, border-color .15s ease;
+}
+a:hover { color: var(--accent-hi); border-bottom-color: var(--accent-hi); }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- Layout ---------- */
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  column-gap: 3.5rem;
+  row-gap: 0;
+  align-items: start;
+}
+
+.main { min-width: 0; }
+
+/* ---------- Masthead ---------- */
+.masthead {
+  grid-column: 1 / -1;
+  margin-bottom: 2.4rem;
+}
+
+.name {
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.tagline {
+  margin: .55rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+/* ---------- Intro / research interests ---------- */
+.intro p {
+  max-width: var(--measure);
+  margin: 0 0 1.1rem;
+}
+
+/* ---------- Section blocks ---------- */
+.block { margin-top: 3rem; }
+
+.block-title {
+  font-size: .82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-family: var(--mono);
+  color: var(--muted);
+  margin: 0 0 1.4rem;
+  padding-bottom: .55rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---------- Projects ---------- */
+.project {
+  max-width: var(--measure);
+  margin-bottom: 2rem;
+}
+
+.project-title {
+  font-size: 1.32rem;
+  font-weight: 600;
+  margin: 0 0 .45rem;
+  line-height: 1.25;
+}
+
+.project p { margin: 0 0 .5rem; }
+
+.project-links {
+  font-family: var(--mono);
+  font-size: .82rem;
+}
+
+/* ---------- Publications ---------- */
+.subhead {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.8rem 0 .8rem;
+}
+
+.pubs {
+  max-width: var(--measure);
+  margin: 0;
+  padding-left: 1.4rem;
+}
+.pubs li { margin-bottom: .9rem; }
+.pubs strong { font-weight: 600; }
+
+/* ---------- Sidebar ---------- */
+.sidebar { position: sticky; top: 4.5rem; }
+.photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: var(--rule);   /* shows a grey block until photo is added */
+  border-radius: 3px;
+  margin-bottom: 1.3rem;
+}
+
+.meta { margin-bottom: 1.1rem; }
+.meta-role {
+  margin: 0;
+  font-weight: 600;
+}
+.meta-line {
+  margin: .1rem 0 0;
+  color: var(--muted);
+  font-size: .98rem;
+}
+.meta-line a { color: var(--muted); border-bottom-color: var(--rule); }
+.meta-line a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: .9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .page {
+    grid-template-columns: 1fr;
+    row-gap: 2.2rem;
+    padding: 2.5rem 1.4rem 4rem;
+  }
+  .masthead { margin-bottom: 0; order: 1; }
+  .sidebar {
+    position: static;
+    order: 2;
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    grid-template-areas: "photo meta" "photo links";
+    gap: .3rem 1.2rem;
+    align-items: start;
+  }
+  .main { order: 3; }
+  .photo  { grid-area: photo; margin-bottom: 0; }
+  .meta:first-of-type { grid-area: meta; margin-bottom: .4rem; }
+  .meta:last-of-type  { display: none; }   /* email shown in links row instead, optional */
+  .links  {
+    grid-area: links;
+    flex-flow: row wrap;
+    gap: .4rem 1.1rem;
+    border-top: none;
+    padding-top: .3rem;
+  }
+  .name { font-size: 2.6rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
