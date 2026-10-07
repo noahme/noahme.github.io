@@ -7,7 +7,7 @@
   <meta name="description" content="Noah Egan — PhD student studying cultural evolution at Stanford.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,27 +38,32 @@
         <h2 class="block-title">Projects</h2>
 
         <article class="project">
-          <h3 class="project-title">Cultural differentiation and city size</h3>
+          <h3 class="project-title">Cultural similarity and city size</h3>
           <p>
-            Do people in larger cities become more culturally different from one
-            another, or does a city just look more diverse because it holds more
-            people? Using the BookCrossing, MovieLens, and Steam datasets, I measure
-            how between-individual differences in books, movies, and video games scale
-            with city size (up to ~370K users). Larger cities show convergence on
-            popular variants alongside divergence on niche ones, a stronger
-            monoculture and more individual exploration at the same time.
+            Do people in larger cities become more culturally similar to each other,
+            or less? Using web browsing data (Comscore, 280K users) and video game
+            libraries (Steam, 368K users) across ~370 US metro areas, I measure how
+            similarity between individuals scales with city size. In larger cities,
+            people are more alike in the popular websites and games they use and less
+            alike in niche ones. A stochastic model of social learning and independent
+            discovery explains the split: variants that spread easily enough reach a
+            larger share of people as populations grow, while the rest become less likely
+            to be widely shared. Different cultural domains may look different simply
+            because they contain different mixes of these two kinds of variants.
           </p>
         </article>
 
         <article class="project">
-          <h3 class="project-title">The speed of cultural change in chess and Go</h3>
+          <h3 class="project-title">Superhuman AI and strategy change in chess and Go</h3>
           <p>
-            How quickly do top players change their opening moves, and what happened
-            when online servers and superhuman engines arrived? Across 50 years of
-            tournament records (3.45M chess and 116K Go games), I decompose
-            year-over-year change into a shared, population-wide component and an
-            individual one. Chess change is driven mostly by individual exploration,
-            while Go's post-AlphaGo spike reflects shared, population-wide adoption.
+            How much do top players change their opening moves from year to year, and
+            what happened when superhuman AI arrived? Across 50 years of tournament
+            records (3.45M chess and 116K Go games), I represent each player's style as
+            a set of move distributions and measure how much it changes each year. I then
+            split that change into a part shared across the population and a part
+            specific to each player. After AlphaGo, Go players changed together,
+            adopting the same new moves. In chess, change has risen since the late 2000s,
+            but it is driven mostly by players exploring on their own.
           </p>
         </article>
 
@@ -66,21 +71,25 @@
           <h3 class="project-title">Self-assembly in fire ant pontoon bridges</h3>
           <p>
             With the Goldman and Randall labs at Georgia Tech, I studied how fire ants
-            build bridges out of their own bodies using only local information. I built
-            an agent-based model and a computer-vision pipeline to quantify the
-            behavior, and helped prove that a Markov-chain model of bridge formation
-            matches experiments.
+            build floating bridges out of their own bodies to reach food across water.
+            Colonies grow bridges in two ways: ants join the tip one at a time, or launch
+            into the water, form rafts, and attach later. I built a computer vision
+            pipeline to measure bridge growth from video and an agent-based model built
+            from measured individual behavior. The model reproduced the experiments and
+            correctly predicted what colonies would do in three new setups. I also
+            derived a simple growth model that explains why bridge growth curves look
+            the same across colonies once time is rescaled, and helped prove that a
+            Markov chain model of bridging forms a single bridge.
           </p>
-          <!-- TODO: replace # with link -->
           <p class="project-links"><a href="https://drops.dagstuhl.de/storage/00lipics/lipics-vol319-disc2024/LIPIcs.DISC.2024.34/LIPIcs.DISC.2024.34.pdf">DISC paper</a></p>
         </article>
 
         <article class="project">
           <h3 class="project-title">Coexistence under higher-order interactions</h3>
           <p>
-            At Princeton I built a spatial Lotka-Volterra model and its mean-field PDE
-            approximation, and found spatial patterns that promote species coexistence
-            only when higher-order interactions between species are present.
+            At Princeton I built a spatial Lotka-Volterra model, a PDE approximation, and
+            stochastic simulations in R, and found coexistence regimes that only appear
+            when species have higher-order interactions.
           </p>
         </article>
       </section>
@@ -107,12 +116,23 @@
           </li>
         </ol>
 
-        <h3 class="subhead">In preparation</h3>
+        <h3 class="subhead">Submitted and in preparation</h3>
         <ol class="pubs">
           <li>
-            <strong>Egan, N.*</strong>, Zeng, H.*, Platnick, J., Avinery, R., Bagheri, H.,
-            Li, S., Sasaki, T., Randall, D., Goldman, D. (2026). Multimodal mechanisms
-            of self-assembly in ant pontoon bridging.
+            <strong>Egan, N.*</strong>, Zeng, H.*, Bagheri, H., Avinery, R., Li, S.,
+            Platnick, J. E., Randall, D., Richa, A. W., Goldman, D. I., Sasaki, T. (2026).
+            Multimodal mechanisms of self-assembly in ant pontoon bridging. Submitted to
+            <em>PNAS</em>. *Equal contribution.
+          </li>
+          <li>
+            <strong>Egan, N.</strong>, Miton, H., Yang, V., Feldman, M. W. (2026). Larger
+            populations simultaneously promote monoculture and diversify niche culture.
+            In preparation.
+          </li>
+          <li>
+            <strong>Egan, N.</strong>, Lappo, E., Rosenberg, N. A., Feldman, M. W. (2026).
+            The effect of superhuman AI on collective strategy adoption among chess and Go
+            players. In preparation.
           </li>
         </ol>
 
@@ -151,7 +171,6 @@
       </div>
 
       <nav class="links">
-        <!-- TODO: drop your CV at assets/cv.pdf, and fill in the two links below -->
         <a href="assets/cv.pdf">CV</a>
         <a href="https://scholar.google.com/citations?user=8q9St3sAAAAJ&hl=en&oi=ao">Google Scholar</a>
         <a href="https://www.linkedin.com/in/noah-egan-b12a241b4/">LinkedIn</a>
