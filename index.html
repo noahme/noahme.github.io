@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noah Egan</title>
-  <meta name="description" content="Noah Egan — PhD student studying cultural evolution at Stanford.">
+  <meta name="description" content="Noah Egan — Stanford PhD student building stochastic models of behavior and testing them on large datasets.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
   <div class="page">
 
     <header class="masthead">
       <h1 class="name">Noah Egan</h1>
-      <p class="tagline">Cultural evolution &middot; computational social science</p>
+      <p class="tagline">Stochastic modeling &middot; large-scale behavioral data</p>
     </header>
 
     <!-- ============ MAIN COLUMN ============ -->
@@ -24,12 +24,14 @@
       <!-- ---- Research interests ---- -->
       <section class="intro">
         <p>
-          I'm a PhD student in Biology at Stanford, advised by Marc Feldman, where I
-          study cultural evolution. Cultural variants like songs, words and political
-          ideas spread through populations, get copied with variation, and are taken up unevenly. That makes culture an
-          evolutionary system, and I'm interested in how recent structural changes,
-          like the internet and now generative AI, are reshaping how it evolves. Before Stanford I studied computer science at Georgia
-          Tech and worked on collective behavior in social insects.
+          I'm a PhD student in Biology at Stanford, advised by Marc Feldman. I build
+          stochastic models of how behaviors spread through populations and test them
+          on large datasets, from web browsing and video game libraries to 50 years of
+          chess and Go tournament games. Most of my work is about culture: songs, words,
+          strategies and ideas get copied with variation and taken up unevenly, and I'm
+          interested in how structural changes like the internet and generative AI
+          reshape that process. Before Stanford I studied computer science at Georgia
+          Tech and modeled collective behavior in fire ants.
         </p>
       </section>
 
@@ -45,11 +47,14 @@
             libraries (Steam, 368K users) across ~370 US metro areas, I measure how
             similarity between individuals scales with city size. In larger cities,
             people are more alike in the popular websites and games they use and less
-            alike in niche ones. A stochastic model of social learning and independent
-            discovery explains the split: variants that spread easily enough reach a
-            larger share of people as populations grow, while the rest become less likely
-            to be widely shared. Different cultural domains may look different simply
-            because they contain different mixes of these two kinds of variants.
+            alike in niche ones. To explain the split, I built a birth-death Markov model
+            of social learning and independent discovery. Variants that spread easily
+            enough reach a larger share of people as populations grow, while the rest
+            become less likely to be widely shared. I estimated how transmissible each of
+            ~50K websites and games is by maximum likelihood, and the model correctly
+            predicts which ones converge and which diverge in larger cities. Different
+            cultural domains may look different simply because they contain different
+            mixes of these two kinds of variants.
           </p>
         </article>
 
@@ -59,9 +64,10 @@
             How much do top players change their opening moves from year to year, and
             what happened when superhuman AI arrived? Across 50 years of tournament
             records (3.45M chess and 116K Go games), I represent each player's style as
-            a set of move distributions and measure how much it changes each year. I then
-            split that change into a part shared across the population and a part
-            specific to each player. After AlphaGo, Go players changed together,
+            a set of conditional move distributions and measure how much it changes each
+            year with Hellinger distance. I then derived a decomposition that splits this
+            change into a part shared across the population and a part specific to each
+            player. After AlphaGo, Go players changed together,
             adopting the same new moves. In chess, change has risen since the late 2000s,
             but it is driven mostly by players exploring on their own.
           </p>
